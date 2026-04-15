@@ -36,7 +36,7 @@ func load_from_json(path: String) -> void:
 	queue_redraw()
 
 ## Returns the reference path for use in StrokeAnalyzer.
-func get_path() -> PackedVector2Array:
+func get_stroke_path() -> PackedVector2Array:
 	return _path
 
 func _draw() -> void:

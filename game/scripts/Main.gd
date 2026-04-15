@@ -108,7 +108,7 @@ func _on_beat(beat_number: int) -> void:
 func _on_stroke_completed(stroke_data: Array) -> void:
 	var result := _analyzer.analyze(
 		stroke_data,
-		_ghost.get_path(),
+		_ghost.get_stroke_path(),
 		_beat_clock,
 		_start_beat_time,
 		_end_beat_time
