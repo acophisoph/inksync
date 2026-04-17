@@ -56,10 +56,10 @@ func _fill_rect(img: Image, x: int, y: int, w: int, h: int, col: Color) -> void:
 
 func _fill_triangle(img: Image, ax: int, ay: int, bx: int, by: int,
 		cx: int, cy: int, col: Color) -> void:
-	var min_x := max(0, min(ax, min(bx, cx)))
-	var max_x := min(W - 1, max(ax, max(bx, cx)))
-	var min_y := max(0, min(ay, min(by, cy)))
-	var max_y := min(H - 1, max(ay, max(by, cy)))
+	var min_x : int = max(0, min(ax, min(bx, cx)))
+	var max_x : int = min(W - 1, max(ax, max(bx, cx)))
+	var min_y : int = max(0, min(ay, min(by, cy)))
+	var max_y : int = min(H - 1, max(ay, max(by, cy)))
 	for py in range(min_y, max_y + 1):
 		for px in range(min_x, max_x + 1):
 			if _point_in_tri(px, py, ax, ay, bx, by, cx, cy):
