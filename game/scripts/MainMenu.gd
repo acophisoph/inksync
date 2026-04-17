@@ -14,11 +14,11 @@ const MODES := [
 		"scene":  "res://scenes/SongSelect.tscn",
 	},
 	{
-		"icon":   "✦",
-		"title":  "Map Editor",
-		"desc":   "Build beatmaps and stroke\nchallenges. Share them with\nthe community.",
-		"accent": Color(0.35, 0.72, 1.0),
-		"scene":  "res://scenes/EditMode.tscn",
+		"icon":   "卷",
+		"title":  "Story Mode",
+		"desc":   "Listen to a story in Mandarin.\nPaint the world to life by\nwriting each character.",
+		"accent": Color(0.55, 0.88, 0.50),
+		"scene":  "res://scenes/StorySelect.tscn",
 	},
 	{
 		"icon":   "漢",
@@ -26,6 +26,13 @@ const MODES := [
 		"desc":   "Practice Chinese characters\nstroke by stroke, guided\nby rhythm.",
 		"accent": Color(1.0, 0.48, 0.48),
 		"scene":  "res://scenes/CharacterMode.tscn",
+	},
+	{
+		"icon":   "✦",
+		"title":  "Map Editor",
+		"desc":   "Build beatmaps and stroke\nchallenges. Share them with\nthe community.",
+		"accent": Color(0.35, 0.72, 1.0),
+		"scene":  "res://scenes/EditMode.tscn",
 	},
 ]
 

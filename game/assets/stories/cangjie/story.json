@@ -1,0 +1,103 @@
+{
+  "title": "仓颉造字",
+  "title_en": "Cang Jie Creates Characters",
+  "description": "The legend of how Chinese writing was born from nature.",
+  "ending": "And so the world was written into being — one stroke at a time.",
+
+  "narration": "res://assets/stories/cangjie/narration.ogg",
+
+  "background_color": [0.91, 0.88, 0.80],
+
+  "story_text": [
+    "上古时代，黄帝的史官仓颉，生来有四只眼睛。",
+    "他仰观天上的日月星辰，",
+    "俯察山川与草木。",
+    "他看见水在石间流淌，",
+    "看见人在林中行走，",
+    "看见月光洒在大地之上。",
+    "他从万物的形状中，创造了文字。",
+    "天地为之震动，鬼神为之哭泣。",
+    "从此，人类有了记录世界的方式。"
+  ],
+
+  "layers": [
+    {
+      "id": "sky",
+      "character": "日",
+      "description": "日 — sun. Cang Jie looked up and saw the sun arc across the sky. He drew its circle, and the character for sun was born.",
+      "narration_line": "他仰观天上的日月星辰",
+      "image": "res://assets/stories/cangjie/layer_sun.png",
+      "rect": [860, 40, 220, 220],
+      "color": [0.98, 0.82, 0.14],
+      "z": 1
+    },
+    {
+      "id": "mountain",
+      "character": "山",
+      "description": "山 — mountain. Three peaks reached toward heaven. He saw their silhouette and drew three strokes rising from the earth.",
+      "narration_line": "俯察山川与草木",
+      "image": "res://assets/stories/cangjie/layer_mountain.png",
+      "rect": [80, 200, 560, 420],
+      "color": [0.32, 0.28, 0.22],
+      "z": 2
+    },
+    {
+      "id": "water",
+      "character": "水",
+      "description": "水 — water. The river wound between stones, splitting and rejoining. Its flowing lines became the character for water.",
+      "narration_line": "他看见水在石间流淌",
+      "image": "res://assets/stories/cangjie/layer_water.png",
+      "rect": [0, 520, 1280, 200],
+      "color": [0.18, 0.48, 0.88],
+      "z": 3
+    },
+    {
+      "id": "tree",
+      "character": "木",
+      "description": "木 — tree. A lone tree stood at the river's edge — trunk, branches reaching, roots holding. One stroke, then two.",
+      "narration_line": "看见人在林中行走",
+      "image": "res://assets/stories/cangjie/layer_tree.png",
+      "rect": [620, 240, 160, 320],
+      "color": [0.24, 0.55, 0.20],
+      "z": 4
+    },
+    {
+      "id": "person",
+      "character": "人",
+      "description": "人 — person. A figure walked between the trees, two legs carrying them forward. The simplest character — two strokes.",
+      "narration_line": "看见人在林中行走",
+      "image": "res://assets/stories/cangjie/layer_person.png",
+      "rect": [560, 380, 80, 180],
+      "color": [0.65, 0.44, 0.28],
+      "z": 5
+    },
+    {
+      "id": "moon",
+      "character": "月",
+      "description": "月 — moon. As night fell, the moon rose and cast silver across the world Cang Jie had been watching all day.",
+      "narration_line": "看见月光洒在大地之上",
+      "image": "res://assets/stories/cangjie/layer_moon.png",
+      "rect": [1020, 60, 180, 180],
+      "color": [0.92, 0.92, 0.78],
+      "z": 6
+    }
+  ],
+
+  "_narration_guide": {
+    "note": "Record or synthesise narration in Mandarin. Suggested text per layer:",
+    "lines": [
+      "仓颉仰望天空，看见太阳。他画了一个圆，日字诞生了。",
+      "他俯视大地，看见三座山峰。山字，就是三峰的形状。",
+      "他听见水声，看见河流蜿蜒。水字，流动而生。",
+      "林中一棵大树，枝干分明。木字，根与枝的写照。",
+      "树下走过一个人，两腿迈步。人字，最简单，也最深刻。",
+      "夜幕降临，月亮升起。月字，如月的缺口。"
+    ],
+    "recommended_tools": [
+      "ElevenLabs (multilingual TTS)",
+      "Azure Cognitive Services (zh-CN neural voices)",
+      "Native speaker recording",
+      "Murf.ai"
+    ]
+  }
+}

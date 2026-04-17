@@ -151,6 +151,7 @@ func _setup_beat_clock() -> void:
 func _setup_canvas() -> void:
 	_canvas = DrawingCanvas.new()
 	_canvas.z_index = 2
+	_canvas.brush_mode = GameState.story_path != ""
 	add_child(_canvas)
 	_canvas.setup(_audio_player)
 	_canvas.set_drawing_enabled(false)
@@ -295,7 +296,7 @@ func _tick_stroke() -> void:
 
 	_phase_beat += 1
 
-	if _phase_beat >= beats:
+	if _phase_beat > beats:
 		_canvas.set_drawing_enabled(false)
 		_grade_stroke()
 
@@ -315,7 +316,12 @@ func _tick_stroke() -> void:
 
 func _tick_rest() -> void:
 	_phase_beat += 1
-	if _phase_beat >= REST_BEATS:
+	if _phase_beat > REST_BEATS:
+		# In Story Mode return control to StoryMode after one complete pass
+		if GameState.story_path != "":
+			GameState.story_char_index += 1
+			get_tree().change_scene_to_file("res://scenes/StoryMode.tscn")
+			return
 		_stroke_idx    = 0
 		_done_strokes  = []
 		_stroke_grades = []

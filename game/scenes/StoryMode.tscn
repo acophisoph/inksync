@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://storymodeuid1"]
+
+[ext_resource type="Script" path="res://scripts/StoryMode.gd" id="1"]
+
+[node name="StoryMode" type="Node2D"]
+script = ExtResource("1")

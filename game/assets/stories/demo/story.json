@@ -1,0 +1,65 @@
+{
+  "title": "山与水",
+  "title_en": "The Mountain and the River",
+  "description": "A traveller walks between ancient peaks and a winding river.",
+  "ending": "The world is painted. The journey is complete.",
+  "narration": "",
+  "background_color": [0.92, 0.89, 0.82],
+
+  "layers": [
+    {
+      "id": "sky",
+      "character": "天",
+      "description": "天 — sky. The vast pale sky stretches above all things.",
+      "image": "",
+      "rect": [0, 0, 1280, 280],
+      "color": [0.58, 0.78, 0.95],
+      "z": 0
+    },
+    {
+      "id": "mountain_left",
+      "character": "山",
+      "description": "山 — mountain. Three peaks rise from the mist.",
+      "image": "",
+      "rect": [60, 160, 480, 420],
+      "color": [0.38, 0.32, 0.24],
+      "z": 1
+    },
+    {
+      "id": "sun",
+      "character": "日",
+      "description": "日 — sun. A warm circle climbs between the peaks.",
+      "image": "",
+      "rect": [900, 48, 200, 200],
+      "color": [0.98, 0.84, 0.18],
+      "z": 2
+    },
+    {
+      "id": "tree",
+      "character": "木",
+      "description": "木 — tree. A lone pine bends in the mountain wind.",
+      "image": "",
+      "rect": [640, 260, 140, 300],
+      "color": [0.25, 0.58, 0.22],
+      "z": 3
+    },
+    {
+      "id": "river",
+      "character": "水",
+      "description": "水 — water. The river flows silver through the valley.",
+      "image": "",
+      "rect": [0, 500, 1280, 220],
+      "color": [0.20, 0.50, 0.88],
+      "z": 4
+    },
+    {
+      "id": "figure",
+      "character": "人",
+      "description": "人 — person. A small figure stands at the water's edge.",
+      "image": "",
+      "rect": [580, 420, 60, 140],
+      "color": [0.62, 0.42, 0.28],
+      "z": 5
+    }
+  ]
+}
