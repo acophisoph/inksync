@@ -87,24 +87,24 @@ func _timing_score(
 	if stroke_data.is_empty():
 		return 0.0
 
-	var hit_window     := (60.0 / bpm) * 0.3   # 30% of a beat = generous window
+	var hit_window     := (60.0 / bpm) * 0.65  # 65% of a beat — forgiving window
 	var actual_start   : float = stroke_data.front()["time"]
 	var actual_end     : float = stroke_data.back()["time"]
 
-	var start_score := clamp(1.0 - absf(actual_start - start_time) / hit_window, 0.0, 1.0)
-	var end_score   := clamp(1.0 - absf(actual_end   - end_time)   / hit_window, 0.0, 1.0)
+	var start_score: float = clamp(1.0 - absf(actual_start - start_time) / hit_window, 0.0, 1.0)
+	var end_score: float   = clamp(1.0 - absf(actual_end   - end_time)   / hit_window, 0.0, 1.0)
 
 	return (start_score + end_score) * 0.5
 
 # ── Letter Grade ───────────────────────────────────────────────────────────────
 
 func _letter_grade(accuracy: float, smoothness: float, timing: float) -> String:
-	# Weighted: shape matters most, then smoothness, then timing
-	var score := (accuracy * 0.5 + smoothness * 0.3 + timing * 0.2) * 100.0
-	if score >= 95: return "S"
-	if score >= 85: return "A"
-	if score >= 70: return "B"
-	if score >= 55: return "C"
+	# Shape is the primary skill; timing is guidance not punishment
+	var score := (accuracy * 0.60 + smoothness * 0.25 + timing * 0.15) * 100.0
+	if score >= 90: return "S"
+	if score >= 76: return "A"
+	if score >= 60: return "B"
+	if score >= 44: return "C"
 	return "D"
 
 # ── Path Utilities ─────────────────────────────────────────────────────────────
@@ -127,7 +127,7 @@ func _resample(path: PackedVector2Array, n: int) -> PackedVector2Array:
 		return path
 
 	# Build cumulative arc-length table
-	var arc_lengths := [0.0]
+	var arc_lengths: Array[float] = [0.0]
 	for i in range(1, path.size()):
 		arc_lengths.append(arc_lengths[-1] + path[i - 1].distance_to(path[i]))
 

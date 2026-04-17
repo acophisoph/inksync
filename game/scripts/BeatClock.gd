@@ -25,6 +25,10 @@ func setup(audio_player: AudioStreamPlayer) -> void:
 func start() -> void:
 	_start_time = Time.get_ticks_msec() / 1000.0
 	_last_beat  = -1
+	set_process(true)
+
+func stop() -> void:
+	set_process(false)
 
 func _process(_delta: float) -> void:
 	var pos := _playback_position()
